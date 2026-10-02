@@ -1,0 +1,38 @@
+{
+  "name": "chat2pdf-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Chat2PDF - converts shared chat conversation links into formatted PDFs",
+  "main": "src/app.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "node --test",
+    "verify:live": "node scripts/verify-live.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
+    "pdfkit": "^0.15.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7",
+    "turbo-stream": "2.4.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "debug/*",
+      "output/*",
+      "temp/*",
+      "src/**/__tests__/*",
+      "src/**/__fixtures__/*"
+    ]
+  }
+}
